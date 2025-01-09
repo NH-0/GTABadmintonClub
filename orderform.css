@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'Lato-regular';
+    src: url(./text/Lato-Regular.ttf    );
+}
+
+
+/*stylesheet*/
+:root {
+    --primary-color: #94b9be;
+    --h2-color: #bfd3bf;
+    --h3-color: rgb(226, 135, 102);
+    --accent-color: rgba(194, 227, 236, 0.7);
+    --text-color: #a4c4ec;
+    --background-color: #1a1a1b;
+    --header-background: #0b0b0c;
+    --footer-background: #0b0b0c;
+    --footer-text-color: rgb(125, 173, 218);
+    --transition-duration: 0.4s;
+    --scale: 1;
+    --scale-hover: 1.1;
+
+
+}
+
+/*Type*/
+:root {
+    --font-size-base: 20px;
+    --font-size-heading: 30px;
+    --font-weight-regular: 300;
+    --font-weight-bold: 700;
+    --font-family: 'lato-regular', sans-serif;
+    --spacing-unit: 12px;
+    --h3-spacing-unit: 15px;
+
+}
+
+body{
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    background-color: var(--header-background);
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-unit);
+}
+
+.logo img{
+    width: 150px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-unit);
+}
+
+nav ul li a{
+display: inline-block;
+text-decoration: none;
+font-weight: var(--font-weight-bold);
+color: var(--primary-color);
+transition: color var(--transition-duration) ease, transform var(--transition-duration)ease;
+}
+
+nav ul li a:hover{
+    color:var(--footer-text-color);
+    transform: scale(var(--scale-hover));
+    }
+
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: var(--spacing-unit);
+}
+/* this is for screen resolution - always centered */
+
+section{
+    margin-bottom: calc(var(--spacing-unit)*4);
+}
+
+/* this is for spacing - in btw the sections - calculates the values */
+
+h2{
+    color: var(--primary-color);
+    font-size: 40px;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 30px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.orderform form{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: var(--footer-background);
+    border-radius: 10px;
+    box-shadow: 6px 10px 12px rgba(111, 184, 206, 0.7);
+    width: 650px;
+    height: 800px;
+    margin: auto;
+    position: relative;
+    padding-bottom: 30px;
+    
+}
+
+.orderform form input:focus , .orderform textarea{
+    border: 2px solid var(--footer-background);
+    padding: var(var(--spacing-unit));
+    border-radius: 5px;
+    
+}
+
+.orderform input:focus , .orderform textarea:focus{
+    border-color: var(--accent-color);
+    outline: none;
+
+}
+
+.orderform input, .orderform select{
+    padding: 10px;
+    margin-bottom: 30px;
+    font-size: var(--font-size-base);
+    border-radius: 5px;
+}
+
+.button{
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border: none;
+    padding: var(--spacing-unit);
+    margin: var(--spacing-unit);
+    cursor: pointer;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-base);
+    border-radius: 5px;
+    transition: background-color 0.6s ease, transform 0.5s ease-in-out;
+}
+
+.button:hover{
+background-color: var(--h3-color);
+color: var(--background-color);
+}
+
+footer{
+    text-align: center;
+    background-color: var(--footer-background);
+    padding: var(--spacing-unit);
+    font-weight: var(--font-weight-bold);
+}
+
+footer p{
+    color: var(--footer-text-color);
+}
